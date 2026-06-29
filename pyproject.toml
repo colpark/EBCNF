@@ -1,0 +1,22 @@
+[project]
+name = "ebcnf"
+version = "0.1.0"
+description = "Neural fields for event-based cameras (EBC): EvINR-style derivative supervision and amortized LAINR"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "torch>=2.4",
+    "numpy>=1.26,<2.0",
+    "matplotlib>=3.8",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["ebcnf"]

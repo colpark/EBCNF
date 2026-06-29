@@ -1,0 +1,24 @@
+# Amortized LAINR-EBC training config ("reasonable amount" of simulated data).
+# Scenes are generated on the fly (seeded); amount = n_train scenes.
+H: 32
+W: 32
+T: 32
+n_tex: 5            # texture components per scene (1 => near-grating/easy)
+contrast: 1.2       # event threshold in units of dL std
+noise: 0.02         # fraction of stochastic (hot-pixel) events
+n_anchors: 1        # RGB anchor frames to fix the DC constant (0 => event-only)
+
+n_train: 1024
+n_val: 128
+batch_size: 8
+steps: 4000
+lr: 0.0005
+lam: 0.02           # spatial-gradient regularization weight
+n_query: 1024       # query coords sampled per scene per step
+
+D: 64               # latent token dim
+hidden: 128         # decoder width
+sigma_xy: 4.0       # Fourier bandwidth (space)
+sigma_t: 8.0        # Fourier bandwidth (time) -- anisotropic, higher in t
+seed: 0
+log_every: 200

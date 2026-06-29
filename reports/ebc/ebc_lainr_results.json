@@ -1,0 +1,9 @@
+{
+  "device": "mps",
+  "n_params": 90306,
+  "steps": 20,
+  "n_train": 16,
+  "val_sign_acc": 0.5238309502601624,
+  "val_ac_corr": -0.003282177436631173,
+  "anchors": 1
+}
